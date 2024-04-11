@@ -1,56 +1,3 @@
-"""import tkinter as tk
-from tkinter import filedialog
-from tkinter import messagebox
-from huffman_coding import HuffmanCoding
-
-class GUI:
-    def __init__(self, root):
-        self.root = root
-        self.root.title("Huffman Coding Compression Tool")
-        self.file_path = tk.StringVar()  # To store selected file path
-        self.create_widgets()
-
-    def create_widgets(self):
-        # Input file selection
-        self.file_entry = tk.Entry(self.root, textvariable=self.file_path, width=50)
-        self.file_entry.pack(side=tk.TOP, pady=5)
-
-        self.select_button = tk.Button(self.root, text="Select File", command=self.select_file)
-        self.select_button.pack(side=tk.TOP, pady=5)
-
-        # Compress Button
-        self.compress_button = tk.Button(self.root, text="Compress File", command=self.compress_file)
-        self.compress_button.pack(side=tk.TOP, pady=5)
-
-        # Decompress Button
-        self.decompress_button = tk.Button(self.root, text="Decompress File", command=self.decompress_file)
-        self.decompress_button.pack(side=tk.TOP, pady=5)
-
-    def select_file(self):
-        file_path = filedialog.askopenfilename()
-        if file_path:
-            self.file_path.set(file_path)
-
-    def compress_file(self):
-        file_path = self.file_path.get()
-        if file_path:
-            huffman = HuffmanCoding(file_path)
-            output_path = huffman.compress()
-            messagebox.showinfo("Success", f"File compressed successfully!\nSaved as: {output_path}")
-
-    def decompress_file(self):
-        file_path = self.file_path.get()
-        if file_path:
-            huffman = HuffmanCoding(file_path)
-            output_path = huffman.decompress()
-            messagebox.showinfo("Success", f"File decompressed successfully!\nSaved as: {output_path}")
-
-if __name__ == "__main__":
-    root = tk.Tk()
-    app = GUI(root)
-    root.mainloop()
-"""
-
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 import threading
@@ -59,7 +6,7 @@ from huffman_coding import HuffmanCoding
 class GUI:
     def __init__(self, root):
         self.root = root
-        self.root.title("Huffman Coding Compression Tool")
+        self.root.title("Hufftastic - Huffman Coding Compression Tool")
         self.file_path = tk.StringVar()  # To store selected file path
         self.create_widgets()
 
